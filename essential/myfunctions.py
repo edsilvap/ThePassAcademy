@@ -1,47 +1,61 @@
 from random import randint
 
-
-def ran():
-	a = randint(1, 6)
-	return a
-
-
-def roll_dice5():
-	resultA = str(ran())
-	resultB = str(ran())
-	resultC = str(ran())
-	resultD = str(ran())
-	resultE = str(ran())
-	out_roll = resultA + resultB + resultC + resultD + resultE
-	return out_roll
+def inputme():
+	input_me = input('\033[1;34mtpa > \033[1;m')
+	return input_me
 
 
-def roll_dice4():
-	resultA = str(ran())
-	resultB = str(ran())
-	resultC = str(ran())
-	resultD = str(ran())
-	out_roll = resultA + resultB + resultC + resultD
-	return out_roll
+def randice():
+	dice = randint(1, 6)
+	return dice
 
 
-def password_generator(parmR, parmA, parmN, parmD, parmO, parmM, **wrdlst):
-	pass1 = wrdlst[parmR]
-	pass2 = wrdlst[parmA]
-	pass3 = wrdlst[parmN]
-	pass4 = wrdlst[parmD]
-	pass5 = wrdlst[parmO]
-	pass6 = wrdlst[parmM]
-	out_gen = pass1 + pass2 + pass3 + pass4 + pass5 + pass6
-	return out_gen
+def roll_5_dice():
+	roll_1 = str(randice())
+	roll_2 = str(randice())
+	roll_3 = str(randice())
+	roll_4 = str(randice())
+	roll_5 = str(randice())
+	roll_out = roll_1 + roll_2 + roll_3 + roll_4 + roll_5
+	return roll_out
 
 
-def password_decifer(prm1, prm2, prm3, prm4, prm5, prm6, **kwarg):
-	dec1 = kwarg[prm1]
-	dec2 = kwarg[prm2]
-	dec3 = kwarg[prm3]
-	dec4 = kwarg[prm4]
-	dec5 = kwarg[prm5]
-	dec6 = kwarg[prm6]
-	dec = dec1 + dec2 + dec3 + dec4 + dec5 + dec6
-	return dec
+def roll_4_dice():
+	roll_1 = str(randice())
+	roll_2 = str(randice())
+	roll_3 = str(randice())
+	roll_4 = str(randice())
+	roll_out = roll_1 + roll_2 + roll_3 + roll_4
+	return roll_out
+
+
+def password_generator(param_1, param_2, param_3, param_4, param_5, param_6, **wordlist):
+	password_gen_1 = wordlist[param_1]
+	password_gen_2 = wordlist[param_2]
+	password_gen_3 = wordlist[param_3]
+	password_gen_4 = wordlist[param_4]
+	password_gen_5 = wordlist[param_5]
+	password_gen_6 = wordlist[param_6]
+	password_gen_out = password_gen_1 + password_gen_2 + password_gen_3 + password_gen_4 + password_gen_5 + password_gen_6
+	return password_gen_out
+
+
+def password_decrypt(param_1, param_2, param_3, param_4, param_5, param_6, **wordlist):
+	password_decrypt_1 = wordlist[param_1]
+	password_decrypt_2 = wordlist[param_2]
+	password_decrypt_3 = wordlist[param_3]
+	password_decrypt_4 = wordlist[param_4]
+	password_decrypt_5 = wordlist[param_5]
+	password_decrypt_6 = wordlist[param_6]
+	password_decrypt_out = password_decrypt_1 + password_decrypt_2 + password_decrypt_3 + password_decrypt_4 + password_decrypt_5 + password_decrypt_6
+	return password_decrypt_out
+
+
+def printme(valor_1, valor_2):
+	print(f'''
+   \033[1;32mP A S S
+   W O R D [ {valor_1} ]\033[1;m
+   -------
+   \033[1;34mP A S S
+     I D   [ {valor_2} ]\033[1;m
+	''')

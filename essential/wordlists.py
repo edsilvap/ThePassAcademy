@@ -1,4 +1,4 @@
-wordlist_4d = {
+wordlist_4_dice = {
 '1111':	'acid',
 '1112':	'acorn',
 '1113':	'acre',
@@ -1298,7 +1298,7 @@ wordlist_4d = {
 }
 
 
-wordlist_5d = {
+wordlist_5_dice = {
 '11111': 'abacus',
 '11112': 'abdomen',
 '11113': 'abdominal',
