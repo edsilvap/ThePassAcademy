@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import sys
+from os import system
 from essential import myfunctions, wordlists
 
 
@@ -44,7 +45,7 @@ def main():
 
 
 
-\033[1;33m[back] to home\033[1;m
+\033[1;33m[back] to home | [clear] to clear\033[1;m
                 ''')
 
                 input_1 = myfunctions.inputme()
@@ -79,6 +80,9 @@ def main():
                     logo()
 
                     myfunctions.printme(password_gen, password_id)
+                elif input_1 == 'clear':
+                    system('clear')
+
                 elif input_1 == 'back':
                     main()
 
@@ -89,11 +93,11 @@ def main():
                 print('''
 
 
-Input Password ID to Decrypt
+\033[1;35m<\033[1;m Input Password ID to Decrypt \033[1;35m>\033[1;m
 
 
 
-\033[1;33m[back] to home\033[1;m
+\033[1;33m[back] to home | [clear] to clear\033[1;m
                 ''')
 
                 input_2 = myfunctions.inputme()
@@ -134,6 +138,9 @@ Input Password ID to Decrypt
                     except KeyError:
                         print('\n\033[1;31m[WARNING] Key invalido\033[1;m')
 
+                elif input_2 == 'clear':
+                    system('clear')
+
                 elif input_2 == 'back':
                     main()
 
@@ -147,11 +154,14 @@ GitHub: @edsilvap
 Instagram: @edslvp
 
 
-\033[1;33m[back] to home\033[1;m
+\033[1;33m[back] to home | [clear] to clear\033[1;m
                 ''')
 
                 input_3 = myfunctions.inputme()
-                if input_3 == 'back':
+                if input_3 == 'clear':
+                    system('clear')
+
+                elif input_3 == 'back':
                     main()
 
                 else:
