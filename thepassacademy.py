@@ -3,6 +3,7 @@ import sys
 from os import system
 from essential import myfunctions, wordlists
 
+so = sys.platform
 
 def logo():
     print('''
@@ -80,8 +81,11 @@ def main():
                     logo()
 
                     myfunctions.printme(password_gen, password_id)
-                elif input_1 == 'clear':
+                elif input_1 == 'clear' and so == 'linux':
                     system('clear')
+
+                elif input_1 == 'clear' and so == 'win32':
+                    system('cls')
 
                 elif input_1 == 'back':
                     main()
@@ -138,8 +142,11 @@ def main():
                     except KeyError:
                         print('\n\033[1;31m[WARNING] Key invalido\033[1;m')
 
-                elif input_2 == 'clear':
+                elif input_2 == 'clear' and so == 'linux':
                     system('clear')
+
+                elif input_2 == 'clear' and so == 'win32':
+                    system('cls')
 
                 elif input_2 == 'back':
                     main()
@@ -158,8 +165,11 @@ Instagram: @edslvp
                 ''')
 
                 input_3 = myfunctions.inputme()
-                if input_3 == 'clear':
+                if input_3 == 'clear' and so == 'linux':
                     system('clear')
+
+                elif input_3 == 'clear' and so == 'win32':
+                    system('cls')
 
                 elif input_3 == 'back':
                     main()
